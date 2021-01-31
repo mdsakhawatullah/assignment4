@@ -117,7 +117,7 @@
         </div>
     
 
-        <div class="booking-content" id="content">
+        <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
@@ -172,21 +172,18 @@
                 document.getElementById('totalBill').innerText = 'Your Total Bill $' + total;
 
             }
-           
+            
+           // book now button portion
+
             const bookNowBtn = document.getElementById('button');
             bookNowBtn.addEventListener('click',function(){
                 const ticketArea = document.getElementById('bookingArea');
                 ticketArea.style.display = 'none';
 
-                const contentArea = document.getElementById('content');
-                contentArea.style.display = 'none';
-
                 const newArea = document.getElementById('new');
                 newArea.style.display = 'block';
                
-            
-
-            });
+             });
 
         </script>
 
