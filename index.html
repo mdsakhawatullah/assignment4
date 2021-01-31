@@ -20,6 +20,7 @@
 
 <body>
     <!--Header and Menu Section-->
+    <div id="bookingArea">
     <header class="container">
         <nav>
             <ul>
@@ -33,7 +34,8 @@
 
     <!--Booking Section-->
     <main class="main-content container">
-        <div class="booking-form">
+        
+            <div class="booking-form" >
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
@@ -111,17 +113,30 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="button" class="btn-style">Book Now</button>
         </div>
+    
 
-        <div class="booking-content">
+        <div class="booking-content" id="content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+    </div>
+
+
+        <div id="new">
+     
+            <h1 class="final-part">Congrates !! </h1>
+            <h2 class="final-part">You have successfully booked your ticket</h2>
+            <h3 id="totalBill">Your Total Bill is</h3>
+            <h4>Thanks To Fly With Us</h4>
+            <h5>Best wishes</h5>
+
         </div>
 
         <script>
 
-            // button increase-decrease
+            // ticket price calculation
 
             function countChange(ticket,isIncrease){
                 const ticketInput = document.getElementById(ticket + '-count');
@@ -154,8 +169,25 @@
 
                 const total = totalPrice + vatTotal;
                 document.getElementById('grandTotal').innerText = '$' + total;
+                document.getElementById('totalBill').innerText = 'Your Total Bill $' + total;
 
             }
+           
+            const bookNowBtn = document.getElementById('button');
+            bookNowBtn.addEventListener('click',function(){
+                const ticketArea = document.getElementById('bookingArea');
+                ticketArea.style.display = 'none';
+
+                const contentArea = document.getElementById('content');
+                contentArea.style.display = 'none';
+
+                const newArea = document.getElementById('new');
+                newArea.style.display = 'block';
+               
+            
+
+            });
+
         </script>
 
 
@@ -163,7 +195,7 @@
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    </section>
+    
 
     <!--Thank You-->
 </body>
